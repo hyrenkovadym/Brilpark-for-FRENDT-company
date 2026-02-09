@@ -1,0 +1,293 @@
+.main {
+    background: #f5f8ff;
+    padding: 60px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #1a1a1a;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main__title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1a5bb8;
+    text-align: center;
+}
+
+.main__intro {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.main__highlight {
+    font-weight: bold;
+    color: #1a5bb8;
+}
+
+.main__feature {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main__feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.main__feature-title {
+    color: #1a5bb8;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.main__list {
+    list-style: disc inside;
+    line-height: 1.6;
+    padding-left: 0;
+}
+
+.main__feature-text {
+    line-height: 1.6;
+}
+
+
+.main__eco-columns {
+    background: linear-gradient(135deg, #e0f7f1, #ffffff);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main__eco-columns:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.main__eco-columns-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.main__eco-column {
+    flex: 1 1 45%;
+    min-width: 250px;
+}
+
+.main__eco-columns .main__feature-title {
+    color: #009688;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.main__eco-columns .main__intro {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.main__eco-columns .main__list {
+    list-style: disc inside;
+    line-height: 1.6;
+    padding-left: 0;
+}
+
+.main__eco-columns .main__list {
+    list-style: none; /* прибираємо стандартні маркери */
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.main__eco-columns .main__list li {
+    background: #ffffff;
+    border-left: 4px solid #009688; /* кольоровий маркер */
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.main__eco-columns .main__list li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+.main__eco-columns .main__list li strong {
+    color: #00796b; /* виділення ключових слів */
+}
+
+
+
+
+
+.main__goals {
+   // background: linear-gradient(135deg, #fff8e1, #e0f7fa);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.main__goals-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.main__goals-left {
+    flex: 1 1 45%;
+    min-width: 250px;
+}
+
+.main__goals-right {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.main__goal-card {
+    background: #ffffff;
+    padding: 14px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 500;
+}
+
+.main__goal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+/* Плавна поява через fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.main__feature-title {
+    color: #00796b;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+
+////////////////////////////
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #ffffff;
+    padding: 0; /* прибрали padding контейнера */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    height: 300px; /* фіксована висота */
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* зайняти всю висоту контейнера */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* вертикальне вирівнювання по центру */
+    align-items: center; /* горизонтальне вирівнювання по центру */
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    padding: 0 20px; /* внутрішній відступ для тексту */
+    box-sizing: border-box;
+    text-align: center; /* текст по центру */
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-slide p {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, #00796b, #1a5bb8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.carousel-slide ul {
+    list-style: disc inside;
+    line-height: 1.5;
+    text-align: left; /* списки можна ліворуч */
+}
+
+
+/* Кнопки навігації */
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.carousel-controls button {
+    background: #1a5bb8;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.carousel-controls button:hover {
+    background: #004b8c;
+}
+
+
+
+.brilpark_info__btn-wrapper {
+  margin-top: 40px; /* відступ від контенту зверху */
+  text-align: center; /* кнопка по центру */
+}
+
+.main__btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(135deg, #2a7de1, #28a745);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.main__btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
